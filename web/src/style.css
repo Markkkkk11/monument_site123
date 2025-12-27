@@ -21,11 +21,29 @@
 @layer base {
   body {
     @apply font-jun bg-white text-dark-lava antialiased;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
+
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 96px;
+    }
+  }
+
+  section {
+    scroll-margin-top: 88px;
+  }
+
+  @media (min-width: 768px) {
+    section {
+      scroll-margin-top: 104px;
+    }
+  }
 
   h1,
   h2,
@@ -74,11 +92,11 @@
 }
 
   .section-title {
-    @apply text-3xl md:text-4xl uppercase mb-6;
+    @apply text-2xl sm:text-3xl md:text-4xl uppercase mb-6;
   }
 
   .section-subtitle {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-sm sm:text-base md:text-lg leading-relaxed;
   }
 
   .no-scrollbar {

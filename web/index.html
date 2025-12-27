@@ -13,10 +13,10 @@
   <body class="bg-white text-dark-lava">
     <div x-data="{ navOpen: false }" class="min-h-screen flex flex-col">
       <header class="fixed top-0 left-0 w-full z-30 border-b border-white/50 bg-white/50 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center gap-6">
-          <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src="/assets/millenium.svg" alt="Millenium" class="h-8 w-auto" />
-            <span class="text-lg tracking-[0.16em] uppercase">Millenium</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 md:h-20 flex items-center gap-4">
+          <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/assets/millenium.svg" alt="Millenium" class="h-7 w-auto md:h-8" />
+            <span class="text-base md:text-lg tracking-[0.16em] uppercase">Millenium</span>
           </a>
           <nav class="hidden md:flex flex-1 text-xs uppercase tracking-[0.16em] justify-center">
             <div class="flex items-center gap-6">
@@ -56,12 +56,12 @@
           <a href="#blog" class="block" @click="navOpen = false">Материалы</a>
           <a href="#contacts" class="block" @click="navOpen = false">Контакты</a>
           <a href="tel:+79273807158" class="block" @click="navOpen = false">+7 927-380-71-58</a>
-          <a href="#contacts" class="btn-primary w-full justify-center">Заказать звонок</a>
+          <a href="#contacts" class="btn-primary w-full justify-center" @click="navOpen = false">Заказать звонок</a>
         </div>
       </header>
 
       <main class="flex-1">
-        <section id="hero" class="relative h-[80vh] md:h-[90vh] flex items-center overflow-hidden">
+        <section id="hero" class="relative min-h-[76vh] md:h-[90vh] flex items-center overflow-hidden">
           <video
             class="absolute inset-0 w-full h-full object-cover"
             autoplay
@@ -75,10 +75,10 @@
           <div class="absolute inset-0 bg-black/50"></div>
           <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-american-silver reveal">
             <div class="badge-soft bg-black/35 text-american-silver border border-white/20">Мемориальные комплексы</div>
-            <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl uppercase leading-tight">
+            <h1 class="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase leading-tight">
               Изготовление памятников и мемориальных комплексов
             </h1>
-            <p class="mt-6 text-lg md:text-xl text-american-silver/90 max-w-3xl">
+            <p class="mt-6 text-base sm:text-lg md:text-xl text-american-silver/90 max-w-3xl">
               Индивидуальные решения, художественная гравировка и полное сопровождение —
               от проектирования до установки на участке захоронения.
             </p>
@@ -105,9 +105,9 @@
                 архитектурной проработкой.
               </p>
             </div>
-            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№79.jpg"
                     alt="Каталог 1"
@@ -115,12 +115,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Памятники простой формы</h3>
-                  <p class="text-sm leading-relaxed">Лаконичные решения, выдержанный стиль и строгие линии.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-1</h3>
+                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита с элементами гранитной брусчатки.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№80.jpg"
                     alt="Каталог 2"
@@ -128,12 +128,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комбинированные памятники</h3>
-                  <p class="text-sm leading-relaxed">Комбинации материалов и фактур для выразительных памятников.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-2</h3>
+                  <p class="text-sm leading-relaxed">Архитектурная композиция из мрамора Коелга, колонны и гранитное основание.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№81.jpg"
                     alt="Каталог 3"
@@ -141,12 +141,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Мемориальные комплексы</h3>
-                  <p class="text-sm leading-relaxed">Полный ансамбль с учетом архитектуры участка и ландшафта.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-3</h3>
+                  <p class="text-sm leading-relaxed">Мемориальный комплекс из Габбро-Диабаз с Голгофой и крестом из мрамора Коелга.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№82.jpg"
                     alt="Каталог 4"
@@ -154,12 +154,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Ограды и ансамбли</h3>
-                  <p class="text-sm leading-relaxed">Единый стиль, рассчитанный под параметры участка.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-4</h3>
+                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз в сочетании с гранитой Куру-Грей.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№83.jpg"
                     alt="Каталог 5"
@@ -167,12 +167,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Эксклюзивные комплексы</h3>
-                  <p class="text-sm leading-relaxed">Уникальные проекты с авторскими элементами и скульптурой.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-5</h3>
+                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Абсолют-Блэк и мрамор Тассос</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.25s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№84.jpg"
                     alt="Каталог 6"
@@ -180,12 +180,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Столы и лавочки</h3>
-                  <p class="text-sm leading-relaxed">Натуральный камень и металл, устойчивость и долговечность.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-6</h3>
+                  <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз и мрамор Коелга.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.3s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№49.jpg"
                     alt="Каталог 7"
@@ -193,12 +193,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">СВО мемориальные комплексы</h3>
-                  <p class="text-sm leading-relaxed">Уважение подвигу: специальные композиции и символика.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-7</h3>
+                  <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз в сочетании с Дымовским гранитом и гранитной брусчаткой.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.35s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№50.jpg"
                     alt="Каталог 8"
@@ -206,12 +206,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комлексы простой формы</h3>
-                  <p class="text-sm leading-relaxed">Согласованные по стилю аксессуары для единого ансамбля.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-8</h3>
+                  <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз из мрамора Коелга и гранитной брусчаткой.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.4s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№51.jpg"
                     alt="Каталог 9"
@@ -219,12 +219,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Фото и гравировка</h3>
-                  <p class="text-sm leading-relaxed">Долговечные фотопортреты и точная гравировка образов.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-9</h3>
+                  <p class="text-sm leading-relaxed">Мраморный комплекс из Дымовского гранита, фото на стекле.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.45s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№52.jpg"
                     alt="Каталог 10"
@@ -232,12 +232,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплексы с мощением</h3>
-                  <p class="text-sm leading-relaxed">Подбор камня и долговечное мощение в единой гамме.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-10</h3>
+                  <p class="text-sm leading-relaxed">Семейный мемориальный комплекс из гранита Габбро-Диабаз.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.5s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/112.png"
                     alt="Каталог 11"
@@ -245,12 +245,12 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Светлые ансамбли</h3>
-                  <p class="text-sm leading-relaxed">Элегантный светлый камень и минималистичная геометрия.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-11</h3>
+                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз и Мрамора.</p>
                 </div>
               </div>
               <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.55s">
-                <div class="relative w-full h-64 overflow-hidden">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№54.jpg"
                     alt="Каталог 12"
@@ -258,8 +258,8 @@
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Скульптурные элементы</h3>
-                  <p class="text-sm leading-relaxed">Авторская пластика и ручная доводка мастеров.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-12</h3>
+                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз с Мансуровским гранитом и портрет на стекле.</p>
                 </div>
               </div>
             </div>
@@ -320,9 +320,9 @@
                 Подборка реализованных проектов и серийных позиций, которые чаще всего выбирают наши заказчики.
               </p>
             </div>
-            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0s">
-                <div class="relative w-full h-56 overflow-hidden">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№13.jpg"
                     alt="Позиция 1"
@@ -335,7 +335,7 @@
                 </div>
               </div>
               <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.05s">
-                <div class="relative w-full h-56 overflow-hidden">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№14.jpg"
                     alt="Позиция 2"
@@ -348,7 +348,7 @@
                 </div>
               </div>
               <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.1s">
-                <div class="relative w-full h-56 overflow-hidden">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№15.jpg"
                     alt="Позиция 3"
@@ -361,7 +361,7 @@
                 </div>
               </div>
               <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.15s">
-                <div class="relative w-full h-56 overflow-hidden">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№16.jpg"
                     alt="Позиция 4"
@@ -374,7 +374,7 @@
                 </div>
               </div>
               <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.2s">
-                <div class="relative w-full h-56 overflow-hidden">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№17.jpg"
                     alt="Позиция 5"
@@ -387,7 +387,7 @@
                 </div>
               </div>
               <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.25s">
-                <div class="relative w-full h-56 overflow-hidden">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№18.jpg"
                     alt="Позиция 6"
@@ -841,7 +841,7 @@
                     <img src="/assets/materials/abs-black.png" alt="Абсолютно-черный" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
-                    <div class="uppercase tracking-[0.12em] text-sm">Абсолютно-черный</div>
+                    <div class="uppercase tracking-[0.12em] text-sm">Абсолют-Блэк</div>
                     <div class="text-xs text-dark-lava/70 mt-1">Китай</div>
                   </div>
                 </div>
@@ -983,19 +983,19 @@
             </div>
           </div>
 
-          <div class="flex-1 flex justify-center">
-            <div class="text-sm text-american-silver/80 leading-relaxed text-center">
-              <p>ИП Гусева Ирина Михайловна</p>
-              <p>ИНН: 583715995964</p>
-              <p>ОГРНИП: 321583500029665</p>
-            </div>
-          </div>
-
-          <div class="md:ml-auto flex flex-wrap gap-4 text-sm uppercase tracking-[0.14em]">
+          <div class="order-2 md:order-3 md:ml-auto flex flex-wrap gap-4 text-sm uppercase tracking-[0.14em]">
             <a href="#catalog" class="hover:text-white">Каталог</a>
             <a href="#products" class="hover:text-white">Товары</a>
             <a href="#about" class="hover:text-white">О нас</a>
             <a href="#contacts" class="hover:text-white">Контакты</a>
+          </div>
+
+          <div class="flex-1 flex justify-center order-3 md:order-2">
+            <div class="text-sm text-american-silver/80 leading-relaxed text-left md:text-center space-y-1">
+              <p>ИП&nbsp;Гусева&nbsp;Ирина&nbsp;Михайловна</p>
+              <p>ИНН: 583715995964</p>
+              <p>ОГРНИП: 321583500029665</p>
+            </div>
           </div>
         </div>
       </footer>
