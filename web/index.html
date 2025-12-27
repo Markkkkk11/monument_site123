@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/millenium.svg" />
+    <title>Millenium | Мемориальные комплексы</title>
+    <meta
+      name="description"
+      content="Изготовление памятников и мемориальных комплексов полного цикла. Индивидуальный подход, собственное производство и современные технологии."
+    />
+  </head>
+  <body class="bg-white text-dark-lava">
+    <div x-data="{ navOpen: false }" class="min-h-screen flex flex-col">
+      <header class="fixed top-0 left-0 w-full z-30 border-b border-white/50 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center gap-6">
+          <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="/assets/millenium.svg" alt="Millenium" class="h-8 w-auto" />
+            <span class="text-lg tracking-[0.16em] uppercase">Millenium</span>
+          </a>
+          <nav class="hidden md:flex flex-1 text-xs uppercase tracking-[0.16em] justify-center">
+            <div class="flex items-center gap-6">
+              <a href="#catalog" class="hover:text-black whitespace-nowrap">Памятники</a>
+              <a href="#complexes" class="hover:text-black whitespace-normal leading-tight text-center">Мемориальные<br />комплексы</a>
+              <a href="#works" class="hover:text-black whitespace-normal leading-tight text-center">Выполненные<br />работы</a>
+              <a href="#products" class="hover:text-black whitespace-nowrap">Товары</a>
+              <a href="#about" class="hover:text-black whitespace-nowrap">О нас</a>
+              <a href="#blog" class="hover:text-black whitespace-nowrap">Материалы</a>
+              <a href="#contacts" class="hover:text-black whitespace-nowrap">Контакты</a>
+            </div>
+          </nav>
+          <div class="ml-auto hidden md:flex items-center gap-4">
+            <a href="tel:+79273807158" class="tracking-[0.12em] uppercase text-xs font-semibold hover:text-black whitespace-nowrap">+7 927-380-71-58</a>
+            <a href="#contacts" class="btn-primary px-5 py-2.5 text-[11px] md:text-xs">Заказать звонок</a>
+          </div>
+          <button
+            class="md:hidden ml-auto text-dark-lava"
+            @click="navOpen = !navOpen"
+            aria-label="Открыть меню"
+          >
+            <span class="block w-6 h-0.5 bg-dark-lava mb-1"></span>
+            <span class="block w-6 h-0.5 bg-dark-lava mb-1"></span>
+            <span class="block w-6 h-0.5 bg-dark-lava"></span>
+          </button>
+        </div>
+        <div
+          x-show="navOpen"
+          x-transition
+          class="md:hidden bg-white border-t border-dark-lava/10 px-4 py-4 space-y-3 text-sm uppercase tracking-[0.14em]"
+        >
+          <a href="#catalog" class="block" @click="navOpen = false">Памятники</a>
+          <a href="#complexes" class="block" @click="navOpen = false">Мемориальные комплексы</a>
+          <a href="#works" class="block" @click="navOpen = false">Выполненные работы</a>
+          <a href="#products" class="block" @click="navOpen = false">Товары</a>
+          <a href="#about" class="block" @click="navOpen = false">О нас</a>
+          <a href="#blog" class="block" @click="navOpen = false">Материалы</a>
+          <a href="#contacts" class="block" @click="navOpen = false">Контакты</a>
+          <a href="tel:+79273807158" class="block" @click="navOpen = false">+7 927-380-71-58</a>
+          <a href="#contacts" class="btn-primary w-full justify-center">Заказать звонок</a>
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <section id="hero" class="relative h-[80vh] md:h-[90vh] flex items-center overflow-hidden">
+          <video
+            class="absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+          >
+            <source src="/assets/media/hero.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-american-silver reveal">
+            <div class="badge-soft bg-black/35 text-american-silver border border-white/20">Мемориальные комплексы</div>
+            <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl uppercase leading-tight">
+              Изготовление памятников и мемориальных комплексов
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-american-silver/90 max-w-3xl">
+              Индивидуальные решения, художественная гравировка и полное сопровождение —
+              от проектирования до установки на участке захоронения.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#catalog" class="btn-primary">Перейти в каталог</a>
+              <a
+                href="#contacts"
+                class="btn-outline border-white text-white hover:bg-white hover:text-dark-lava"
+              >
+                Заказать звонок
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="catalog" class="relative bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center py-16 md:py-20">
+          <div class="absolute inset-0 bg-white/90"></div>
+          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl reveal">
+              <div class="badge-soft">Каталог</div>
+              <h2 class="section-title mt-4">Памятники и комплексы</h2>
+              <p class="section-subtitle">
+                Все виды памятников и мемориальных комплексов: от строгих форм до эксклюзивных проектов с
+                архитектурной проработкой.
+              </p>
+            </div>
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№79.jpg"
+                    alt="Каталог 1"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Памятники простой формы</h3>
+                  <p class="text-sm leading-relaxed">Лаконичные решения, выдержанный стиль и строгие линии.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№80.jpg"
+                    alt="Каталог 2"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комбинированные памятники</h3>
+                  <p class="text-sm leading-relaxed">Комбинации материалов и фактур для выразительных памятников.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№81.jpg"
+                    alt="Каталог 3"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Мемориальные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Полный ансамбль с учетом архитектуры участка и ландшафта.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№82.jpg"
+                    alt="Каталог 4"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Ограды и ансамбли</h3>
+                  <p class="text-sm leading-relaxed">Единый стиль, рассчитанный под параметры участка.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№83.jpg"
+                    alt="Каталог 5"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Эксклюзивные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Уникальные проекты с авторскими элементами и скульптурой.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.25s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№84.jpg"
+                    alt="Каталог 6"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Столы и лавочки</h3>
+                  <p class="text-sm leading-relaxed">Натуральный камень и металл, устойчивость и долговечность.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.3s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№49.jpg"
+                    alt="Каталог 7"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">СВО мемориальные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Уважение подвигу: специальные композиции и символика.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.35s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№50.jpg"
+                    alt="Каталог 8"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комлексы простой формы</h3>
+                  <p class="text-sm leading-relaxed">Согласованные по стилю аксессуары для единого ансамбля.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.4s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№51.jpg"
+                    alt="Каталог 9"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Фото и гравировка</h3>
+                  <p class="text-sm leading-relaxed">Долговечные фотопортреты и точная гравировка образов.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.45s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№52.jpg"
+                    alt="Каталог 10"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплексы с мощением</h3>
+                  <p class="text-sm leading-relaxed">Подбор камня и долговечное мощение в единой гамме.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.5s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/112.png"
+                    alt="Каталог 11"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Светлые ансамбли</h3>
+                  <p class="text-sm leading-relaxed">Элегантный светлый камень и минималистичная геометрия.</p>
+                </div>
+              </div>
+              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.55s">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <img
+                    src="/assets/complexes/№54.jpg"
+                    alt="Каталог 12"
+                    class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Скульптурные элементы</h3>
+                  <p class="text-sm leading-relaxed">Авторская пластика и ручная доводка мастеров.</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <a
+                href="/assets/media/catalog.pdf"
+                download
+                class="btn-primary"
+              >
+                Скачать каталог
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="complexes" class="relative bg-[url('/assets/textures/1_mar.jpeg')] bg-cover bg-center text-american-silver py-16 md:py-20">
+          <div class="absolute inset-0 bg-black/55"></div>
+          <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+              <div class="badge-soft bg-white/10 text-american-silver border border-white/20">Мемориальные комплексы</div>
+              <h2 class="section-title mt-4">Глубина замысла и точность исполнения</h2>
+              <p class="section-subtitle text-american-silver/90">
+                Мы предлагаем индивидуальный подход к каждому клиенту, учитывая все его пожелания и предпочтения. Наши
+                специалисты помогут вам выбрать оптимальный материал, форму и дизайн памятника, а также предложат
+                различные варианты материалов, оформления и гравировки.
+              </p>
+            </div>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+              <div class="bg-white/10 border border-white/15 p-6 h-full">
+                <h3 class="text-xl uppercase mb-3">Проектирование</h3>
+                <p class="text-sm leading-relaxed text-american-silver/90">
+                  3D-модели, эскизы и спецификации материалов до запуска в производство.
+                </p>
+              </div>
+              <div class="bg-white/10 border border-white/15 p-6 h-full">
+                <h3 class="text-xl uppercase mb-3">Производство</h3>
+                <p class="text-sm leading-relaxed text-american-silver/90">
+                  ЧПУ, лазерная гравировка и ручная доводка мастеров для ювелирной точности деталей.
+                </p>
+              </div>
+              <div class="bg-white/10 border border-white/15 p-6 h-full">
+                <h3 class="text-xl uppercase mb-3">Монтаж</h3>
+                <p class="text-sm leading-relaxed text-american-silver/90">
+                  Рассчитываем фундамент под грунт, перевозим и устанавливаем комплекс «под ключ».
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="products" class="relative bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center py-16 md:py-20">
+          <div class="absolute inset-0 bg-white/90"></div>
+          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl reveal">
+              <div class="badge-soft">Популярные товары</div>
+              <h2 class="section-title mt-4">Выбор клиентов</h2>
+              <p class="section-subtitle">
+                Подборка реализованных проектов и серийных позиций, которые чаще всего выбирают наши заказчики.
+              </p>
+            </div>
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0s">
+                <div class="relative w-full h-56 overflow-hidden">
+                  <img
+                    src="/assets/pamyatniki/№13.jpg"
+                    alt="Позиция 1"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Гранитный комплекс</h3>
+                  <p class="text-sm leading-relaxed">Контрастная полировка, строгие линии, долговечность.</p>
+                </div>
+              </div>
+              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.05s">
+                <div class="relative w-full h-56 overflow-hidden">
+                  <img
+                    src="/assets/pamyatniki/№14.jpg"
+                    alt="Позиция 2"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комбинированный памятник</h3>
+                  <p class="text-sm leading-relaxed">Сочетание фактур камня и мягких линий силуэта.</p>
+                </div>
+              </div>
+              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.1s">
+                <div class="relative w-full h-56 overflow-hidden">
+                  <img
+                    src="/assets/pamyatniki/№15.jpg"
+                    alt="Позиция 3"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Памятник с барельефом</h3>
+                  <p class="text-sm leading-relaxed">Художественная проработка образа и аккуратная гравировка.</p>
+                </div>
+              </div>
+              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.15s">
+                <div class="relative w-full h-56 overflow-hidden">
+                  <img
+                    src="/assets/pamyatniki/№16.jpg"
+                    alt="Позиция 4"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс с мощением</h3>
+                  <p class="text-sm leading-relaxed">Подбор камня под цветовую гамму и долговечное мощение.</p>
+                </div>
+              </div>
+              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.2s">
+                <div class="relative w-full h-56 overflow-hidden">
+                  <img
+                    src="/assets/pamyatniki/№17.jpg"
+                    alt="Позиция 5"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Скульптурный акцент</h3>
+                  <p class="text-sm leading-relaxed">Авторская пластика и тщательная ручная отделка.</p>
+                </div>
+              </div>
+              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.25s">
+                <div class="relative w-full h-56 overflow-hidden">
+                  <img
+                    src="/assets/pamyatniki/№18.jpg"
+                    alt="Позиция 6"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Светлый ансамбль</h3>
+                  <p class="text-sm leading-relaxed">Элегантный светлый камень и минималистичная геометрия.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="bg-marble-light bg-cover bg-center py-16 md:py-20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <div class="badge-soft">О нас</div>
+              <h2 class="section-title mt-4">Индивидуальный подход к каждому проекту</h2>
+              <div class="space-y-4 section-subtitle">
+                <p>
+                  Мемориальная компания Millenium — производитель мемориальной продукции, специализирующийся на
+                  изготовлении и установке памятников и мемориальных комплексов из гранита и мрамора.
+                </p>
+                <p>
+                  Мы создаём индивидуальные решения, сочетая профессиональный опыт, современные технологии и высокое
+                  качество материалов. Собственное производство и современное оборудование позволяют реализовывать
+                  проекты любой сложности.
+                </p>
+                <p>
+                  Наша команда дизайнеров и мастеров сопровождает каждый проект от эскиза до установки, обеспечивая
+                  строгий контроль качества. Мы создаём мемориалы, которые достойно сохраняют память и отражают
+                  индивидуальность ушедших близких.
+                </p>
+              </div>
+              <div class="mt-6">
+                <h3 class="text-xl uppercase tracking-[0.14em] mb-4">Преимущества</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm leading-relaxed">
+                  <div class="bg-white/80 p-4 shadow-soft">
+                    <h4 class="uppercase mb-2 tracking-[0.12em]">Подход</h4>
+                    <p>Индивидуальный подбор материалов, формы и оформления под пожелания семьи и особенности участка.</p>
+                  </div>
+                  <div class="bg-white/80 p-4 shadow-soft">
+                    <h4 class="uppercase mb-2 tracking-[0.12em]">Команда</h4>
+                    <p>Опытные дизайнеры, мастера и гравёры ведут проект от эскиза до установки с контролем качества.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white shadow-soft p-6 space-y-4">
+              <h3 class="text-xl uppercase tracking-[0.12em]">Полный цикл</h3>
+              <ul class="space-y-3 text-sm leading-relaxed list-disc list-inside">
+                <li>Подготовка проектной и технической документации.</li>
+                <li>Производство и гравировка с контролем качества на каждом этапе.</li>
+                <li>Логистика и монтаж с расчетом фундамента под особенности грунта.</li>
+                <li>Сервис и помощь в уходе за памятником после установки.</li>
+              </ul>
+              <div class="pt-2">
+                <a href="#contacts" class="btn-primary">Получить консультацию</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="works" class="relative bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center py-16 md:py-20">
+          <div class="absolute inset-0 bg-white/90"></div>
+          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl reveal">
+              <div class="badge-soft">Выполненные работы</div>
+              <h2 class="section-title mt-4">Портфолио и опыт</h2>
+              <p class="section-subtitle">
+                Сотни реализованных проектов: от семейных захоронений до крупных мемориальных ансамблей. Покажем
+                портфолио и предложим аналогичные решения под ваш бюджет.
+              </p>
+            </div>
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
+                <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                  <img src="/assets/pamyatniki/№19.jpg" alt="Работа 1" class="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+              <div class="bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
+                <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                  <img src="/assets/pamyatniki/№20.jpg" alt="Работа 2" class="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+              <div class="bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
+                <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                  <img src="/assets/pamyatniki/№11.jpg" alt="Работа 3" class="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+              <div class="bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
+                <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                  <img src="/assets/pamyatniki/№2.jpg" alt="Работа 4" class="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="relative bg-[url('/assets/textures/1_mar.jpeg')] bg-cover bg-center text-american-silver py-16 md:py-20">
+          <div class="absolute inset-0 bg-black/55"></div>
+          <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+            <div>
+              <div class="badge-soft bg-white/10 text-american-silver border border-white/20">Услуги и компенсации</div>
+              <h2 class="section-title mt-4">Поддержка семей и оформление выплат</h2>
+              <p class="section-subtitle text-american-silver/85">
+                Помогаем оформить компенсации на установку памятников участникам СВО и других льготных категорий,
+                собираем пакет документов и сопровождаем процесс.
+              </p>
+              <div class="mt-8 space-y-4" x-data="{open:null, toggle(id){ this.open = this.open===id ? null : id }}">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <button
+                    type="button"
+                    @click="toggle('doc')"
+                    :aria-expanded="open==='doc'"
+                    class="btn-outline w-full justify-center text-american-silver border-white/40 hover:bg-white hover:text-dark-lava"
+                  >
+                    Оформление разрешительной документации
+                  </button>
+                  <button
+                    type="button"
+                    @click="toggle('resp')"
+                    :aria-expanded="open==='resp'"
+                    class="btn-outline w-full justify-center text-american-silver border-white/40 hover:bg-white hover:text-dark-lava"
+                  >
+                    Ответственный за захоронение
+                  </button>
+                  <button
+                    type="button"
+                    @click="toggle('timing')"
+                    :aria-expanded="open==='timing'"
+                    class="btn-outline w-full justify-center text-american-silver border-white/40 hover:bg-white hover:text-dark-lava"
+                  >
+                    Сроки изготовления
+                  </button>
+                  <button
+                    type="button"
+                    @click="toggle('warranty')"
+                    :aria-expanded="open==='warranty'"
+                    class="btn-outline w-full justify-center text-american-silver border-white/40 hover:bg-white hover:text-dark-lava"
+                  >
+                    Гарантия
+                  </button>
+                  <button
+                    type="button"
+                    @click="toggle('payment')"
+                    :aria-expanded="open==='payment'"
+                    class="btn-outline w-full justify-center text-american-silver border-white/40 hover:bg-white hover:text-dark-lava"
+                  >
+                    Оплата
+                  </button>
+                  <button
+                    type="button"
+                    @click="toggle('comp')"
+                    :aria-expanded="open==='comp'"
+                    class="btn-outline w-full justify-center text-american-silver border-white/40 hover:bg-white hover:text-dark-lava"
+                  >
+                    Компенсации
+                  </button>
+                </div>
+
+                <div class="space-y-3">
+                  <div
+                    x-show="open==='doc'"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    x-cloak
+                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                  >
+                    <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Оформление разрешительной документации</h3>
+                    <div class="text-sm leading-relaxed space-y-3">
+                      <p>
+                        В МЕМОРИАЛЬНОЙ КОМПАНИИ Millenium мы осознаем всю деликатность и сложность процесса оформления
+                        разрешительной документации на установку памятника. Поэтому мы берем на себя все хлопоты, связанные
+                        с получением необходимых разрешений, избавляя вас от бюрократической волокиты и экономя ваше
+                        драгоценное время.
+                      </p>
+                      <p>
+                        Благодаря многолетнему опыту работы и налаженным связям, мы обладаем полным доступом ко всем
+                        кладбищам Москвы и Московской области. Мы действуем в строгом соответствии с постановлениями
+                        Правительства Москвы и имеем все необходимые сертификаты и документы, подтверждающие нашу
+                        квалификацию и право на проведение работ.
+                      </p>
+                      <p>
+                        Для получения разрешения на установку памятника вам потребуется лишь заполнить заявление,
+                        предоставив минимальный пакет документов. Наша компания предоставит вам полный комплект
+                        необходимой документации, оформленный в соответствии со всеми требованиями.
+                      </p>
+                      <p>
+                        Мы ценим ваше время и понимаем ваше желание избежать лишних хлопот. Поэтому предлагаем вам
+                        воспользоваться услугой оформления всех необходимых документов по доверенности. Наши юристы возьмут
+                        на себя все заботы, связанные с подачей и получением разрешений, гарантируя оперативное и успешное
+                        решение вопроса.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    x-show="open==='resp'"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    x-cloak
+                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                  >
+                    <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Ответственный за захоронение</h3>
+                    <div class="text-sm leading-relaxed space-y-3 max-h-[24rem] overflow-y-auto pr-2">
+                      <p class="uppercase tracking-[0.08em]">ОТВЕТСТВЕННЫЙ ЗА ЗАХОРОНЕНИЕ</p>
+                      <p>
+                        Мало кто задумывается о роли ответственного за захоронение, статус которого возник относительно недавно.
+                        В настоящее время любые действия с могилой невозможны без учета прав и обязательств этого человека. Кто же
+                        может быть назначен ответственным за захоронение и на каком основании? Этот юридический статус доступен
+                        любому близкому покойного, кто занимается оформлением документации на захоронение и предоставляет свои
+                        личные данные администрации кладбища.
+                      </p>
+                      <p>
+                        В первую очередь, это касается ближайших родственников, имеющих приоритетное право, аналогичное
+                        наследованию: первая очередь – супруг/супруга, дети/родители (включая усыновленных); вторая очередь –
+                        братья/сестры (в том числе неполнородные), бабушки/дедушки, внуки; третья очередь – дяди/тети (в том
+                        числе неполнородные); четвертая очередь – прабабушки/прадедушки; пятая очередь — остальные родственники.
+                      </p>
+                      <p>
+                        Следует помнить, что вместе с правами, которые дает регистрация в документах на могилу умершего
+                        родственника, ответственное лицо получает и определенные обязанности. Неисполнение этих обязанностей
+                        может привести к судебным разбирательствам.
+                      </p>
+                      <p>
+                        Специфика процесса назначения ответственного за место захоронения. Паспорт на могилу представляет собой
+                        бессрочное право пользования участком земли на кладбище, предназначенным для погребения умершего. Этот
+                        документ закрепляет конкретный участок за умершим, обеспечивая его сохранность. В паспорте также
+                        указывается живой человек, которому предоставлено право распоряжаться этим участком.
+                      </p>
+                      <p>
+                        Для резервирования места и оформления необходимых документов член семьи усопшего должен обратиться в
+                        администрацию кладбища, предоставив следующие обязательные документы: официальное свидетельство о смерти;
+                        документ, удостоверяющий личность, для идентификации; заявление в письменной форме с запросом о
+                        выделении участка земли для погребения.
+                      </p>
+                      <p>
+                        Если личное посещение затруднительно, оформление похорон можно поручить ритуальному агенту. Он будет
+                        представлять интересы заказчика (потенциального ответственного за место захоронения) на основании
+                        доверенности.
+                      </p>
+                      <p>
+                        После оформления паспорта захоронения и внесения в него информации об ответственном лице, это лицо
+                        наделяется следующими правами: определять порядок благоустройства участка, включая установку мемориалов,
+                        памятников, цветников, а также проведение ремонтных или реставрационных работ в колумбарии; давать согласие
+                        или отказ на совершение дополнительных захоронений на данном участке; лично присутствовать при эксгумации
+                        тела или изъятии праха.
+                      </p>
+                      <p>
+                        Одновременно ответственное лицо обязано поддерживать надлежащую чистоту на закрепленной территории,
+                        следить за состоянием сооружений на могиле и зеленых насаждений. Помимо этого, на ответственного за
+                        захоронение возлагаются финансовые затраты, связанные с процедурами погребения или эксгумации.
+                      </p>
+                      <p>
+                        Как узнать, кто является ответственным за участок захоронения? Данные сведения не являются
+                        конфиденциальными и фиксируются в учетных документах каждого кладбища. Для получения информации достаточно
+                        обратиться к сотрудникам администрации кладбища, которые предоставят необходимые сведения.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    x-show="open==='timing'"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    x-cloak
+                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                  >
+                    <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Сроки изготовления</h3>
+                    <div class="text-sm leading-relaxed space-y-3">
+                      <p>
+                        Понимание временных рамок – важный аспект. Мы предоставляем прозрачную информацию о сроках
+                        изготовления и установки.
+                      </p>
+                      <p>
+                        Простые памятники, с минимальной художественной обработкой, изготавливаются в течение месяца с
+                        момента договора и утверждения эскиза/ретуши.
+                      </p>
+                      <p>
+                        Мемориальные комплексы требуют индивидуального подхода: сроки зависят от дизайна, объёма и
+                        материалов, обычно от 1 до 6 месяцев.
+                      </p>
+                      <p>
+                        Сложные проекты (склепы, часовни) могут занимать больше времени из‑за расчётов, согласований и
+                        строительных работ. Сроки оговариваем заранее и держим в курсе хода работ.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    x-show="open==='warranty'"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    x-cloak
+                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                  >
+                    <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Гарантия</h3>
+                    <div class="text-sm leading-relaxed space-y-3">
+                      <p>
+                        Мы несем полную ответственность за каждый созданный памятник. Используем только натуральный гранит
+                        и мрамор, известные прочностью и устойчивостью; камень проходит строгий отбор.
+                      </p>
+                      <p>
+                        Контроль качества — на всех этапах: распиловка, гравировка, финишная обработка. Современное
+                        оборудование и опытные мастера обеспечивают точность и безупречность.
+                      </p>
+                      <p>
+                        Наша цель – мемориал, который служит долгие годы и сохраняет память. Выбирая нас, выбираете
+                        надежность.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    x-show="open==='payment'"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    x-cloak
+                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                  >
+                    <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Оплата</h3>
+                    <div class="text-sm leading-relaxed space-y-3">
+                      <p>
+                        Мы предлагаем прозрачную поэтапную оплату для комфорта клиентов.
+                      </p>
+                      <p>
+                        50% — аванс при договоре: старт работ, закупка материалов, разработка проекта.
+                      </p>
+                      <p>
+                        30% — после готовности элементов и вашей приемки на производстве, чтобы подтвердить соответствие
+                        эскизу и качеству.
+                      </p>
+                      <p>
+                        20% — после установки и финальной приемки на месте.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    x-show="open==='comp'"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    x-cloak
+                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                  >
+                    <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Компенсации</h3>
+                  <div class="text-sm leading-relaxed space-y-3 max-h-[24rem] overflow-y-auto pr-2">
+                    <p class="uppercase tracking-[0.08em]">
+                      ПОЛУЧЕНИЕ КОМПЕНСАЦИИ ЗА УСТАНОВКУ ПАМЯТНИКА ВОИНУ СВО В МОСКВЕ
+                    </p>
+                    <p>
+                      Чтобы поддержать родственников погибшего военнослужащего, участвовавшего в специальной военной операции
+                      (СВО), государство предоставляет компенсацию фактических затрат на создание и установку надгробного
+                      памятника. Эта инициатива направлена на то, чтобы семья умершего могла достойно организовать прощание, не
+                      заботясь о финансовых вопросах. В статье мы подробно рассмотрим процесс получения компенсации за установку
+                      памятника воинам СВО, необходимые документы и критерии, которые должны быть соблюдены для успешного
+                      оформления данной государственной помощи.
+                    </p>
+                    <p>
+                      Законодательная база. Процедура получения компенсации регулируется ФЗ «О ветеранах» (ст. 24) и п. 3 ст. 11
+                      ФЗ №8 «О погребении и похоронном деле». Погребение и установка памятника осуществляются за счет ведомства,
+                      где служил военнослужащий. Участники СВО со статусом ветеранов и их семьи могут претендовать на выплаты.
+                    </p>
+                    <p>
+                      Сколько выплачивает государство. Постановление Правительства от 06.05.1994 г. (изм. 05.04.2024):
+                      33 005–52 000 ₽ в зависимости от категории, с ежегодной индексацией. Региональные нормы могут дополнять
+                      федеральные.
+                    </p>
+                    <p>
+                      Размер компенсаций зависит от региона, должности и места службы. В среднем — 33 005–52 000 ₽. При меньших
+                      расходах возмещают фактическую стоимость; оплату работ нужно сначала произвести самостоятельно по договору и
+                      чекам. Лучше использовать всю сумму на достойный памятник.
+                    </p>
+                    <p>
+                      Документы: заявление; свидетельство о смерти участника СВО; подтверждение участия (удостоверение/справка);
+                      договор на установку; квитанции/чеки; паспорт заявителя; документ о родстве; банковские реквизиты.
+                    </p>
+                    <p>
+                      Пошаговая инструкция: 1) подготовка пакета документов; 2) заполнение заявления (форма в военкомате); 3)
+                      подача в военкомат по месту прописки или захоронения; 4) проверка (до месяца); 5) решение; 6) перечисление
+                      (до двух недель); 7) апелляция при необходимости.
+                    </p>
+                    <p>
+                      Следуя инструкции, можно успешно получить компенсацию, соблюдая сроки и требования. Мы помогаем собрать
+                      документы, подать заявление, сопровождать до решения и готовим апелляцию при отказе, включая оформление
+                      справки формы БО-13.
+                    </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white/10 border border-white/15 p-6 space-y-4">
+              <h3 class="text-xl uppercase tracking-[0.12em]">Этапы установки комплекса</h3>
+              <ol class="list-decimal list-inside space-y-2 text-sm leading-relaxed text-american-silver/90">
+                <li>Подготовка грунта и расчет несущей способности.</li>
+                <li>Заливка фундамента с учетом веса комплекса.</li>
+                <li>Монтаж, выверка геометрии и фиксация элементов.</li>
+                <li>Уборка, уход и рекомендации по сохранности.</li>
+              </ol>
+              <p class="text-sm text-american-silver/85">
+                Каждый шаг документируем и согласуем с заказчиком, чтобы комплекс служил десятилетиями.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="blog" class="relative py-14 md:py-16 bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center">
+          <div class="absolute inset-0 bg-white/90"></div>
+          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl reveal">
+              <div class="badge-soft">Материалы</div>
+              <h2 class="section-title mt-4">Камень для памятников</h2>
+              <p class="section-subtitle">
+                Подбор проверенных материалов: география происхождения и внешний вид. Ниже — образцы, доступные для ваших проектов.
+              </p>
+            </div>
+            <div
+              class="mt-10"
+              x-data="{scroll(e){ const el = $refs.materials; if(!el) return; el.scrollLeft += e.deltaY; }}"
+            >
+              <div
+                x-ref="materials"
+                @wheel.prevent="scroll($event)"
+                class="flex gap-6 min-w-full overflow-x-auto pb-4 no-scrollbar"
+              >
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/abs-black.png" alt="Абсолютно-черный" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Абсолютно-черный</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Китай</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.05s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/gabbro-diabase.jpg" alt="Габбро-диабаз" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Габбро-диабаз</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Китай</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.1s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/dymovsky.jpg" alt="Дымовский" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Дымовский</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.15s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/siberian.jpg" alt="Сибирский" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Сибирский</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.2s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/statuario.jpg" alt="Статуарио" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Статуарио</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Италия</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.25s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/yuzhno-sultaevsky.png" alt="Южно-султаевский" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Южно-султаевский</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.3s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/mansurovsky.png" alt="Мансуровский" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Мансуровский</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
+                  </div>
+                </div>
+                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal" style="--d:0.35s">
+                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                    <img src="/assets/materials/koelga.png" alt="Коелга" class="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div class="px-3 py-3 text-center">
+                    <div class="uppercase tracking-[0.12em] text-sm">Коелга</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-xs text-dark-lava/60 mt-2">Прокрутите колесиком, чтобы увидеть больше материалов</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contacts" class="bg-marble-light bg-cover bg-center py-16 md:py-20">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+            <div>
+              <div class="badge-soft">Контакты</div>
+              <h2 class="section-title mt-4">Свяжитесь с нами</h2>
+              <p class="section-subtitle">
+                Оставьте контакты — подберем решение, подготовим эскизы и согласуем бюджет.
+              </p>
+              <div class="mt-6 space-y-3 text-sm leading-relaxed">
+                <div class="flex items-center gap-2">
+                  <span class="tracking-[0.12em] uppercase">Телефон:</span>
+                  <a href="tel:+79273807158" class="hover:text-black">+7 927-380-71-58</a>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="tracking-[0.12em] uppercase">Email:</span>
+                  <a href="mailto:millenium-msk@bk.ru" class="hover:text-black">millenium-msk@bk.ru</a>
+                </div>
+                <p>Готовы встретиться на площадке, привезти образцы камня и показать портфолио.</p>
+              </div>
+            </div>
+            <div class="bg-white shadow-soft p-6">
+              <form class="space-y-4">
+                <div>
+                  <label class="block text-xs uppercase tracking-[0.14em] mb-1">Имя</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    class="w-full border border-dark-lava/20 px-3 py-3 text-sm focus:outline-none focus:border-dark-lava"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-[0.14em] mb-1">Телефон</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    class="w-full border border-dark-lava/20 px-3 py-3 text-sm focus:outline-none focus:border-dark-lava"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-[0.14em] mb-1">Комментарий</label>
+                  <textarea
+                    name="comment"
+                    rows="4"
+                    placeholder="Опишите задачу или желаемый вид памятника"
+                    class="w-full border border-dark-lava/20 px-3 py-3 text-sm focus:outline-none focus:border-dark-lava"
+                  ></textarea>
+                </div>
+                <p class="text-xs text-dark-lava/70">
+                  Нажимая «Отправить», вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных.
+                </p>
+                <button type="button" class="btn-primary w-full justify-center">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bg-black text-american-silver py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center gap-6">
+          <div class="flex items-center gap-3">
+            <img src="/assets/millenium.svg" alt="Millenium" class="h-10 w-auto" />
+            <div>
+              <p class="uppercase tracking-[0.16em]">Millenium</p>
+              <p class="text-sm text-american-silver/80 mt-1">Памятники и мемориальные комплексы полного цикла.</p>
+            </div>
+          </div>
+
+          <div class="flex-1 flex justify-center">
+            <div class="text-sm text-american-silver/80 leading-relaxed text-center">
+              <p>ИП Гусева Ирина Михайловна</p>
+              <p>ИНН: 583715995964</p>
+              <p>ОГРНИП: 321583500029665</p>
+            </div>
+          </div>
+
+          <div class="md:ml-auto flex flex-wrap gap-4 text-sm uppercase tracking-[0.14em]">
+            <a href="#catalog" class="hover:text-white">Каталог</a>
+            <a href="#products" class="hover:text-white">Товары</a>
+            <a href="#about" class="hover:text-white">О нас</a>
+            <a href="#contacts" class="hover:text-white">Контакты</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
