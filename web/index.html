@@ -10,9 +10,9 @@
       content="Изготовление памятников и мемориальных комплексов полного цикла. Индивидуальный подход, собственное производство и современные технологии."
     />
   </head>
-  <body class="bg-white text-dark-lava">
+  <body class="bg-[#0c0e13] text-dark-lava">
     <div x-data="{ navOpen: false }" class="min-h-screen flex flex-col">
-      <header class="fixed top-0 left-0 w-full z-30 border-b border-white/50 bg-white/50 backdrop-blur-sm">
+      <header class="fixed top-0 left-0 w-full z-30 border-b border-white/10 bg-[#0d111a]/70 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 md:h-20 flex items-center gap-4">
           <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img src="/assets/millenium.svg" alt="Millenium" class="h-7 w-auto md:h-8" />
@@ -46,7 +46,7 @@
         <div
           x-show="navOpen"
           x-transition
-          class="md:hidden bg-white border-t border-dark-lava/10 px-4 py-4 space-y-3 text-sm uppercase tracking-[0.14em]"
+          class="md:hidden bg-[#0f1420] border-t border-white/10 px-4 py-4 space-y-3 text-sm uppercase tracking-[0.14em]"
         >
           <a href="#catalog" class="block" @click="navOpen = false">Памятники</a>
           <a href="#complexes" class="block" @click="navOpen = false">Мемориальные комплексы</a>
@@ -96,8 +96,7 @@
           </div>
         </section>
 
-        <section id="catalog" class="relative bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center py-16 md:py-20">
-          <div class="absolute inset-0 bg-white/90"></div>
+        <section id="catalog" class="relative bg-[#090809] py-16 md:py-20">
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl reveal">
               <div class="badge-soft">Каталог</div>
@@ -108,7 +107,7 @@
               </p>
             </div>
             <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№79.jpg"
@@ -121,7 +120,7 @@
                   <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита с элементами гранитной брусчатки.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№80.jpg"
@@ -134,7 +133,7 @@
                   <p class="text-sm leading-relaxed">Архитектурная композиция из мрамора Коелга, колонны и гранитное основание.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№81.jpg"
@@ -147,7 +146,7 @@
                   <p class="text-sm leading-relaxed">Мемориальный комплекс из Габбро-Диабаз с Голгофой и крестом из мрамора Коелга.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№82.jpg"
@@ -160,7 +159,7 @@
                   <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз в сочетании с гранитой Куру-Грей.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№83.jpg"
@@ -173,7 +172,7 @@
                   <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Абсолют-Блэк и мрамор Тассос</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.25s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.25s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№84.jpg"
@@ -186,7 +185,7 @@
                   <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз и мрамор Коелга.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.3s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.3s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№49.jpg"
@@ -199,7 +198,7 @@
                   <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз в сочетании с Дымовским гранитом и гранитной брусчаткой.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.35s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.35s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№50.jpg"
@@ -212,7 +211,7 @@
                   <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз из мрамора Коелга и гранитной брусчаткой.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.4s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.4s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№51.jpg"
@@ -225,7 +224,7 @@
                   <p class="text-sm leading-relaxed">Мраморный комплекс из Дымовского гранита, фото на стекле.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.45s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.45s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№52.jpg"
@@ -238,7 +237,7 @@
                   <p class="text-sm leading-relaxed">Семейный мемориальный комплекс из гранита Габбро-Диабаз.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.5s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.5s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/112.png"
@@ -251,7 +250,7 @@
                   <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз и Мрамора.</p>
                 </div>
               </div>
-              <div class="group bg-white/85 backdrop-blur shadow-soft overflow-hidden soft-card reveal" style="--d:0.55s">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.55s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
                     src="/assets/complexes/№54.jpg"
@@ -290,19 +289,19 @@
               </p>
             </div>
             <div class="mt-10 grid md:grid-cols-3 gap-6">
-              <div class="bg-white/10 border border-white/15 p-6 h-full soft-card">
+              <div class="surface p-6 h-full soft-card">
                 <h3 class="text-xl uppercase mb-3">Проектирование</h3>
                 <p class="text-sm leading-relaxed text-american-silver/90">
                   3D-модели, эскизы и спецификации материалов до запуска в производство.
                 </p>
               </div>
-              <div class="bg-white/10 border border-white/15 p-6 h-full soft-card">
+              <div class="surface p-6 h-full soft-card">
                 <h3 class="text-xl uppercase mb-3">Производство</h3>
                 <p class="text-sm leading-relaxed text-american-silver/90">
                   ЧПУ, лазерная гравировка и ручная доводка мастеров для ювелирной точности деталей.
                 </p>
               </div>
-              <div class="bg-white/10 border border-white/15 p-6 h-full soft-card">
+              <div class="surface p-6 h-full soft-card">
                 <h3 class="text-xl uppercase mb-3">Монтаж</h3>
                 <p class="text-sm leading-relaxed text-american-silver/90">
                   Рассчитываем фундамент под грунт, перевозим и устанавливаем комплекс «под ключ».
@@ -312,8 +311,7 @@
           </div>
         </section>
 
-        <section id="products" class="relative bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center py-16 md:py-20">
-          <div class="absolute inset-0 bg-white/90"></div>
+        <section id="products" class="relative bg-[#090809] py-16 md:py-20">
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl reveal">
               <div class="badge-soft">Популярные товары</div>
@@ -323,7 +321,7 @@
               </p>
             </div>
             <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0s">
+              <div class="group overflow-hidden surface shadow-soft soft-card reveal" style="--d:0s">
                 <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№13.jpg"
@@ -336,7 +334,7 @@
                   <p class="text-sm leading-relaxed">Памятник Габбро-Диабаз с Ангелом на овальной структуре.</p>
                 </div>
               </div>
-              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.05s">
+              <div class="group overflow-hidden surface shadow-soft soft-card reveal" style="--d:0.05s">
                 <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№14.jpg"
@@ -349,7 +347,7 @@
                   <p class="text-sm leading-relaxed">Памятник Габбро-Диабаз с Ангелом и Крестом.</p>
                 </div>
               </div>
-              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.1s">
+              <div class="group overflow-hidden surface shadow-soft soft-card reveal" style="--d:0.1s">
                 <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№15.jpg"
@@ -362,7 +360,7 @@
                   <p class="text-sm leading-relaxed">Памятник Габбро-Диабаз с Ангелом.</p>
                 </div>
               </div>
-              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.15s">
+              <div class="group overflow-hidden surface shadow-soft soft-card reveal" style="--d:0.15s">
                 <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№16.jpg"
@@ -375,7 +373,7 @@
                   <p class="text-sm leading-relaxed">Памятник Габбро-Диабаз с Ангелом.</p>
                 </div>
               </div>
-              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.2s">
+              <div class="group overflow-hidden surface shadow-soft soft-card reveal" style="--d:0.2s">
                 <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№17.jpg"
@@ -388,7 +386,7 @@
                   <p class="text-sm leading-relaxed">Памятник Габбро-Диабаз с Ангелом и большим Крестом.</p>
                 </div>
               </div>
-              <div class="group overflow-hidden shadow-soft bg-white soft-card reveal" style="--d:0.25s">
+              <div class="group overflow-hidden surface shadow-soft soft-card reveal" style="--d:0.25s">
                 <div class="relative w-full h-48 sm:h-56 overflow-hidden">
                   <img
                     src="/assets/pamyatniki/№18.jpg"
@@ -405,7 +403,7 @@
           </div>
         </section>
 
-        <section id="about" class="bg-marble-light bg-cover bg-center py-16 md:py-20">
+        <section id="about" class="bg-[#090809] py-16 md:py-20">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <div class="badge-soft">О нас</div>
@@ -429,18 +427,18 @@
               <div class="mt-6">
                 <h3 class="text-xl uppercase tracking-[0.14em] mb-4">Преимущества</h3>
                 <div class="grid sm:grid-cols-2 gap-4 text-sm leading-relaxed">
-                  <div class="bg-white/80 p-4 shadow-soft soft-card">
+                  <div class="surface p-4 shadow-soft soft-card">
                     <h4 class="uppercase mb-2 tracking-[0.12em]">Подход</h4>
                     <p>Индивидуальный подбор материалов, формы и оформления под пожелания семьи и особенности участка.</p>
                   </div>
-                  <div class="bg-white/80 p-4 shadow-soft soft-card">
+                  <div class="surface p-4 shadow-soft soft-card">
                     <h4 class="uppercase mb-2 tracking-[0.12em]">Команда</h4>
                     <p>Опытные дизайнеры, мастера и гравёры ведут проект от эскиза до установки с контролем качества.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="bg-white shadow-soft p-6 space-y-4">
+              <div class="surface p-6 space-y-4">
               <h3 class="text-xl uppercase tracking-[0.12em]">Полный цикл</h3>
               <ul class="space-y-3 text-sm leading-relaxed list-disc list-inside">
                 <li>Подготовка проектной и технической документации.</li>
@@ -455,8 +453,7 @@
           </div>
         </section>
 
-        <section id="works" class="relative bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center py-16 md:py-20">
-          <div class="absolute inset-0 bg-white/90"></div>
+        <section id="works" class="relative bg-[#090809] py-16 md:py-20">
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl reveal">
               <div class="badge-soft">Эксклюзивные комплексы</div>
@@ -467,28 +464,28 @@
               </p>
             </div>
             <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              <div class="group bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
-                <div class="w-full aspect-square bg-white flex items-center justify-center">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
+                <div class="w-full aspect-square surface flex items-center justify-center">
                   <img src="/assets/exclusive/exclusive-1.jpg" alt="Эксклюзивный комплекс 1" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110" />
                 </div>
               </div>
-              <div class="group bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
-                <div class="w-full aspect-square bg-white flex items-center justify-center">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
+                <div class="w-full aspect-square surface flex items-center justify-center">
                   <img src="/assets/exclusive/exclusive-2.jpg" alt="Эксклюзивный комплекс 2" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110" />
                 </div>
               </div>
-              <div class="group bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
-                <div class="w-full aspect-square bg-white flex items-center justify-center">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
+                <div class="w-full aspect-square surface flex items-center justify-center">
                   <img src="/assets/exclusive/exclusive-3.jpg" alt="Эксклюзивный комплекс 3" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110" />
                 </div>
               </div>
-              <div class="group bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
-                <div class="w-full aspect-square bg-white flex items-center justify-center">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
+                <div class="w-full aspect-square surface flex items-center justify-center">
                   <img src="/assets/exclusive/exclusive-4.jpg" alt="Эксклюзивный комплекс 4" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110" />
                 </div>
               </div>
-              <div class="group bg-white shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
-                <div class="w-full aspect-square bg-white flex items-center justify-center">
+              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
+                <div class="w-full aspect-square surface flex items-center justify-center">
                   <img src="/assets/exclusive/exclusive-5.jpg" alt="Эксклюзивный комплекс 5" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110" />
                 </div>
               </div>
@@ -500,7 +497,7 @@
           <div class="absolute inset-0 bg-black/55"></div>
           <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <div class="badge-soft bg-white/10 text-american-silver border border-white/20">Услуги и компенсации</div>
+              <div class="badge-soft">Услуги и компенсации</div>
               <h2 class="section-title mt-4">Поддержка семей и оформление выплат</h2>
               <p class="section-subtitle text-american-silver/85">
                 Помогаем оформить компенсации на установку памятников участникам СВО и других льготных категорий,
@@ -568,7 +565,7 @@
                     x-transition:leave-start="opacity-100 translate-y-0"
                     x-transition:leave-end="opacity-0 translate-y-2"
                     x-cloak
-                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                    class="surface p-6 shadow-soft border border-white/10"
                   >
                     <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Оформление разрешительной документации</h3>
                     <div class="text-sm leading-relaxed space-y-3">
@@ -606,7 +603,7 @@
                     x-transition:leave-start="opacity-100 translate-y-0"
                     x-transition:leave-end="opacity-0 translate-y-2"
                     x-cloak
-                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                    class="surface p-6 shadow-soft border border-white/10"
                   >
                     <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Ответственный за захоронение</h3>
                     <div class="text-sm leading-relaxed space-y-3 max-h-[24rem] overflow-y-auto pr-2">
@@ -674,7 +671,7 @@
                     x-transition:leave-start="opacity-100 translate-y-0"
                     x-transition:leave-end="opacity-0 translate-y-2"
                     x-cloak
-                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                    class="surface p-6 shadow-soft border border-white/10"
                   >
                     <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Сроки изготовления</h3>
                     <div class="text-sm leading-relaxed space-y-3">
@@ -705,7 +702,7 @@
                     x-transition:leave-start="opacity-100 translate-y-0"
                     x-transition:leave-end="opacity-0 translate-y-2"
                     x-cloak
-                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                    class="surface p-6 shadow-soft border border-white/10"
                   >
                     <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Гарантия</h3>
                     <div class="text-sm leading-relaxed space-y-3">
@@ -732,7 +729,7 @@
                     x-transition:leave-start="opacity-100 translate-y-0"
                     x-transition:leave-end="opacity-0 translate-y-2"
                     x-cloak
-                    class="bg-white/90 text-dark-lava p-6 shadow-soft border border-dark-lava/10"
+                    class="surface p-6 shadow-soft border border-white/10"
                   >
                     <h3 class="uppercase tracking-[0.12em] mb-3 text-sm">Оплата</h3>
                     <div class="text-sm leading-relaxed space-y-3">
@@ -824,8 +821,7 @@
           </div>
         </section>
 
-        <section id="blog" class="relative py-14 md:py-16 bg-[url('/assets/textures/marble.jpg')] bg-cover bg-center">
-          <div class="absolute inset-0 bg-white/90"></div>
+        <section id="blog" class="relative py-14 md:py-16 bg-[#090809]">
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl reveal">
               <div class="badge-soft">Материалы</div>
@@ -849,10 +845,10 @@
               <div
                 x-ref="materials"
                 @wheel.prevent="scroll($event)"
-                class="flex gap-6 min-w-full overflow-x-auto pb-4 no-scrollbar smooth-x snap-x snap-proximity"
+                class="flex gap-6 min-w-full overflow-x-auto pb-4 no-scrollbar smooth-x snap-x snap-proximity bg-[#090809]"
               >
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/abs-black.png" alt="Абсолютно-черный" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -860,8 +856,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Китай</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.05s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.05s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/gabbro-diabase.jpg" alt="Габбро-диабаз" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -869,8 +865,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Китай</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.1s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.1s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/dymovsky.jpg" alt="Дымовский" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -878,8 +874,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.15s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.15s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/siberian.jpg" alt="Сибирский" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -887,8 +883,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.2s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.2s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/statuario.jpg" alt="Статуарио" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -896,8 +892,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Италия</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.25s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.25s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/yuzhno-sultaevsky.png" alt="Южно-султаевский" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -905,8 +901,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.3s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.3s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/mansurovsky.png" alt="Мансуровский" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -914,8 +910,8 @@
                     <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
                   </div>
                 </div>
-                <div class="w-52 flex-shrink-0 bg-white shadow-soft soft-card reveal snap-start" style="--d:0.35s">
-                  <div class="w-full aspect-[4/3] bg-white flex items-center justify-center">
+                <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.35s">
+                  <div class="w-full aspect-[4/3] surface flex items-center justify-center">
                     <img src="/assets/materials/koelga.png" alt="Коелга" class="max-h-full max-w-full object-contain" />
                   </div>
                   <div class="px-3 py-3 text-center">
@@ -929,7 +925,7 @@
           </div>
         </section>
 
-        <section id="contacts" class="bg-marble-light bg-cover bg-center py-16 md:py-20">
+        <section id="contacts" class="bg-[#090809] py-16 md:py-20">
           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
             <div>
               <div class="badge-soft">Контакты</div>
@@ -949,7 +945,7 @@
                 <p>Готовы встретиться на площадке, привезти образцы камня и показать портфолио.</p>
               </div>
             </div>
-            <div class="bg-white shadow-soft p-6">
+            <div class="surface shadow-soft p-6">
               <form class="space-y-4">
                 <div>
                   <label class="block text-xs uppercase tracking-[0.14em] mb-1">Имя</label>
