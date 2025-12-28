@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/millenium.svg" />
+    <style>
+      :root {
+        --bg: #090809;
+        --surface: #111016;
+        --surface-soft: #161417;
+        --text: #eceff3;
+        --muted: #b3b6c2;
+        --accent: #f3c978;
+        --border: rgba(255, 255, 255, 0.14);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Jun", "Times New Roman", serif;
+        background: linear-gradient(180deg, #090809 0%, #111016 60%, #090809 100%);
+        color: var(--text);
+      }
+      header {
+        padding: 20px 16px 8px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 8px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .section-title {
+        margin: 12px 0 4px;
+        font-size: 24px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .title-hidden {
+        display: none;
+      }
+      .badge-soft {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 14px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-size: 12px;
+        background: rgba(243, 201, 120, 0.12);
+        color: var(--accent);
+        border: 1px solid rgba(243, 201, 120, 0.3);
+        margin-bottom: 10px;
+      }
+      .title-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 10px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+      }
+      .title-pill::before,
+      .title-pill::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background: linear-gradient(135deg, var(--accent), var(--accent));
+        opacity: 0.8;
+      }
+      p.subtitle {
+        margin: 0;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px 48px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin-top: 26px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.26);
+        overflow: hidden;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(243, 201, 120, 0.5);
+        box-shadow: 0 18px 48px rgba(243, 201, 120, 0.18);
+      }
+      .card-img {
+        position: relative;
+        width: 100%;
+        padding-top: 70%;
+        background: #fff;
+      }
+      .card-img img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        background: #fff;
+      }
+      .card:hover .card-img img {
+        transform: scale(1.05);
+      }
+      .card-body {
+        padding: 14px 14px 18px;
+      }
+      .card-svo .card-img img {
+        object-fit: cover;
+        transform: scale(1.03);
+      }
+      .card-svo:hover .card-img img {
+        transform: scale(1.08);
+      }
+      .card-complex .card-img img {
+        object-fit: cover;
+        transform: scale(1.02);
+      }
+      .card-complex:hover .card-img img {
+        transform: scale(1.07);
+      }
+      .card-stone .card-img img {
+        object-fit: cover;
+        transform: scale(1.02);
+      }
+      .card-stone:hover .card-img img {
+        transform: scale(1.06);
+      }
+      .card-stone-hero .card-img {
+        background: #f4f4f4;
+      }
+      .card-stone-hero .card-img img {
+        object-fit: contain;
+        transform: scale(1.02);
+      }
+      .card-stone-hero:hover .card-img img {
+        transform: scale(1.06);
+      }
+      .card-title {
+        margin: 0 0 6px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .card-desc {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .breadcrumb a {
+        color: var(--muted);
+        text-decoration: none;
+        letter-spacing: 0.06em;
+      }
+      .breadcrumb a:hover {
+        color: var(--accent);
+      }
+      .back {
+        margin-top: 16px;
+      }
+      .back a {
+        color: var(--accent);
+        text-decoration: none;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <nav class="breadcrumb">
+        <a href="/">Главная</a>
+        <span>/</span>
+        <span id="crumb"></span>
+      </nav>
+      <div class="badge-soft" id="badge">Каталог</div>
+      <h1 class="section-title title-hidden" id="title">Каталог</h1>
+      <p class="subtitle" id="subtitle">Подборка изделий</p>
+      <div class="back"><a href="/#catalog">← Вернуться на главную</a></div>
+    </header>
+    <main class="container">
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <script>
+      const data = {
+        simple: {
+          title: 'Простые памятники',
+          subtitle: 'Базовые решения с аккуратной геометрией',
+          dir: '/assets/catalog/simple/',
+          items: [
+            '№2.jpg','№3.jpg','№4.jpg','№5.jpg','№6..jpg','№7..jfif','№8..jfif','№9.jfif','№10.jpg','№11.jpg',
+            '№12.jpg','№13.jpg','№14.jpg','№15.jpg','№16.jpg','№17.jpg','№18.jpg','№19.jpg','№20.jpg'
+          ]
+        },
+        combo: {
+          title: 'Комбинированные памятники',
+          subtitle: 'Сочетание материалов и фактур',
+          dir: '/assets/catalog/combo/',
+          items: [
+            'IMG_6404.jpg','IMG_6405.jpg','IMG_6406.jpg','IMG_6407.jpg','IMG_6408.jpg','IMG_6409.jpg','IMG_6410.jpg','IMG_6411.jpg','IMG_6412.jpg','IMG_6413.jpg','IMG_6414.jpg','IMG_6415.jpg','IMG_6416.jpg','IMG_6417.jpg','IMG_6418.jpg','IMG_6419.jpg','IMG_6420.jpg','IMG_6421.jpg','IMG_6422.jpg','IMG_6423.jpg','IMG_6424.jpg','IMG_6425.jpg','IMG_6426.jpg','IMG_6427.jpg','IMG_6428.jpg','IMG_6429.jpg','IMG_6430.jpg','IMG_6431.jpg','IMG_6432.jpg','IMG_6433.jpg','IMG_6434.jpg','IMG_6435.jpg','IMG_6436.jpg','IMG_6437.jpg','IMG_6438.jpg','IMG_6439.jpg','IMG_6440.jpg','IMG_6441.jpg','IMG_6442.jpg','IMG_6443.jpg','IMG_6444.jpg','IMG_6445.jpg','IMG_6446.jpg','IMG_6447.jpg','IMG_6448.jpg','IMG_6449.jpg','IMG_6450.jpg','IMG_6451.jpg','IMG_6452.jpg','IMG_6453.jpg','IMG_6455.jpg','IMG_6456.jpg','IMG_6458.jpg','IMG_6459.jpg','IMG_6460.jpg','IMG_6461.jpg','IMG_6462.jpg','IMG_6463.jpg','IMG_6464.jpg','IMG_6465.jpg'
+          ]
+        },
+        complex: {
+          title: 'Мемориальные комплексы',
+          subtitle: 'Архитектурные ансамбли и решения',
+          dir: '/assets/catalog/complex/',
+          items: [
+            '112.png','№2.jpg','№4.jpg','№5.jpg','№6.jpg','№10.jpg','№11.jpg','№12.jpg','№13.jpg','№14.jpg','№15.jpg','№17.jpg','№18.jpg','№19.jpg','№21.jpg','№22.jpg','№23.jpg','№24.jpg','№25.jpg','№26.jpg','№27.jpg','№28.jpg','№29.jpg','№30.jpg','№31.jpg','№32.jpg','№33.jpg','№34.jpg','№35.jpg','№36.jpg','№37.jpg','№38.jpg','№39.jpg','№40.jpg','№41.jpg','№42.jpg','№43.jpg','№45.jpg','№46.jpg','№47.jpg','№48.jpg','№50.jpg','№51.jpg','№52.jpg','№53.jpg','№54.jpg','№55.jpg','№56.jpg','№57.jpg','№58.jpg','№59.jpg','№60.jpg','№61.jpg','№62.jpg','№63.jpg','№64.jpg','№65.jpg','№66.jpg','№67.jpg','№68.jpg','№69.jpg','№70.jpg','№71.jpg','№72.jpg','№73.jpg','№75.png','№76.jpg','№77.jpg','№78.jpg','№79.jpg','№80.jpg','№81.jpg','№82.jpg','№83.jpg','№84.jpg','№85.jpg','№86.jpg','№87.jpg','№88.jpg','№89.jpg','№90.jpg','№91.jpg','№92.jpg','№93.jpg','№94.jpg','№95.jpg','№96.jpg','№97.jpg','№98.jpg','№99.jpg','№100.jpg','№101.jpg','№102.jpg','№103.jpg','№104.jpg','№105.jpg','№106.jpg','№108.jpg','№109.jpg','№110.jpg','№111.jpg'
+          ]
+        },
+        svo: {
+          title: 'СВО мемориальные комплексы',
+          subtitle: 'Комплексы для героев СВО',
+          dir: '/assets/catalog/svo/',
+          items: ['№49.jpg','№73.jpg','№74.jpg','№107.jpg']
+        },
+        exclusive: {
+          title: 'Эксклюзивные мемориальные комплексы',
+          subtitle: 'Уникальные проекты и редкие материалы',
+          dir: '/assets/catalog/exclusive/',
+          items: [
+            'IMG_6299.jpg','IMG_6301.jpg','IMG_6302.jpg','IMG_6303.jpg','IMG_6304.jpg','IMG_6307.jpg','IMG_6308.jpg','IMG_6309.jpg','IMG_6310.jpg','IMG_6312.jpg','IMG_6313.jpg','IMG_6315.jpg','IMG_6316.jpg','IMG_6317.jpg','IMG_6318.jpg','IMG_6319.jpg','IMG_6321.jpg','IMG_6322.jpg','IMG_6323.jpg','IMG_6324.jpg','IMG_6325.jpg','IMG_6326.jpg','IMG_6327.jpg','IMG_6328.jpg','IMG_6331.jpg','IMG_6333.jpg','IMG_6334.jpg'
+          ]
+        },
+        premium: {
+          title: 'Премиальные мемориальные комплексы',
+          subtitle: 'Высокий класс исполнения и насыщенный дизайн',
+          dir: '/assets/catalog/premium/',
+          items: [
+            'IMG_6283.jpg','IMG_6284.jpg','IMG_6285.jpg','IMG_6286.jpg','IMG_6288.jpg','IMG_6289.jpg','IMG_6290.jpg','IMG_6291.jpg','IMG_6292.jpg','IMG_6293.JPG','IMG_6294.jpg','IMG_6295.jpg','IMG_6296.jpg','IMG_6297.jpg','IMG_6300.jpg'
+          ]
+        },
+        fence: {
+          title: 'Ограды',
+          subtitle: 'Классические и усиленные ограды для благоустройства',
+          dir: '/assets/catalog/fence/',
+          items: [
+            'o1-600x600.jpg',
+            'o2-1.jpg',
+            'o2-11-600x600.jpg',
+            'o2-12-600x600.jpg',
+            'o2-14-600x600.jpg',
+            'o2-15-600x600.jpg',
+            'o2-3-600x600.jpg',
+            'o2-4-600x600.jpg',
+            'o2-600x600.jpg'
+          ]
+        },
+        stone: {
+          title: 'Столы и лавочки из камня',
+          subtitle: 'Надёжные столешницы и лавочки под ваш комплекс',
+          dir: '/assets/catalog/stone/',
+          items: [
+            'image-17-07-25-10-08-1-300x300.webp',
+            'image-17-07-25-10-08-2-300x300.webp',
+            'image-17-07-25-10-08-300x300.webp',
+            'image-17-07-25-10-08-3-300x300.webp',
+            's10-600x600.jpg',
+            's3-600x600.jpg',
+            's4-600x600.jpg',
+            's7-600x600.jpg'
+          ]
+        },
+        metal: {
+          title: 'Столы и лавочки металлические',
+          subtitle: 'Металлокаркасы и столешницы с защитным покрытием',
+          dir: '/assets/catalog/metal/',
+          items: [
+            's1-600x600.jpg',
+            's5-600x600.jpg',
+            's2-600x600.jpg',
+            's6-600x600.jpg'
+          ]
+        },
+        angels: {
+          title: 'Ангелы и скульптуры',
+          subtitle: 'Скульптуры и фигуры для мемориалов',
+          dir: '/assets/catalog/angels/',
+          items: [
+            'a1-300x300.jpg',
+            'a2-300x300.jpg',
+            'a3-300x300.jpg',
+            'a4-300x300.jpg',
+            'a5-300x300.jpg',
+            'a6-300x300.jpg',
+            'a7-300x300.jpg',
+            'a8-300x300.jpg'
+          ]
+        },
+        photo: {
+          title: 'Фото на стекле и керамика',
+          subtitle: 'Примеры фотопечати на стекле и керамике',
+          dir: '/assets/catalog/photo/',
+          items: ['ker-300x300.jpg']
+        },
+        vases: {
+          title: 'Вазы и лампады',
+          subtitle: 'Подборка гранитных ваз и лампад',
+          dir: '/assets/catalog/vases/',
+          items: [
+            'Л-1-001-600x600.jpg',
+            'Л-10-001-600x600.jpg',
+            'Л-2-002-600x600.jpg',
+            'Л-3-001-600x600.jpg',
+            'Л-4-001-600x600.jpg',
+            'Л-5-001-600x600.jpg',
+            'Л-6-001-600x600.jpg',
+            'Л-8-001-600x600.jpg',
+            'Л-9-001-600x600.jpg',
+            '60_001-600x600.jpg',
+            '60_002-600x600.jpg',
+            '60_003-600x600.jpg',
+            '30_002-300x300.jpg',
+            '30_004-300x300.jpg',
+            '40_001-300x300.jpg',
+            '40_003-300x300.jpg',
+            '50_002-300x300.jpg',
+            '50_003-300x300.jpg',
+            'Ш10-002-300x300.jpg',
+            'Ш10-003-300x300.jpg'
+          ]
+        }
+      };
+
+      const params = new URLSearchParams(location.search);
+      const type = params.get('type') || 'simple';
+      const conf = data[type] || data.simple;
+
+      document.getElementById('title').textContent = conf.title;
+      document.getElementById('subtitle').textContent = conf.subtitle;
+      document.getElementById('crumb').textContent = conf.title;
+
+      document.getElementById('badge').textContent = conf.title;
+      const titleEl = document.getElementById('title');
+
+      const grid = document.getElementById('grid');
+      conf.items.forEach((file, idx) => {
+        const card = document.createElement('div');
+        let cardClass = 'card';
+        if (type === 'svo') cardClass += ' card-svo';
+        else if (type === 'complex') cardClass += ' card-complex';
+        else if (type === 'stone') {
+          cardClass += ' card-stone';
+          if (idx < 4) cardClass += ' card-stone-hero';
+        }
+        card.className = cardClass;
+
+        const titleText = type === 'vases' ? `Ваза гранитная ${idx + 1}` : `${conf.title} ${idx + 1}`;
+        card.innerHTML = `
+          <div class="card-img">
+            <img src="${conf.dir}${encodeURIComponent(file)}" alt="${conf.title} ${idx + 1}" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">${titleText}</div>
+            <p class="card-desc">Согласуем дизайн, материал и монтаж под ваш запрос.</p>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
+

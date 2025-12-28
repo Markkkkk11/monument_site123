@@ -11,7 +11,7 @@
     />
   </head>
   <body class="bg-[#0c0e13] text-dark-lava">
-    <div x-data="{ navOpen: false }" class="min-h-screen flex flex-col">
+    <div x-data="{ navOpen: false, menu: null }" class="min-h-screen flex flex-col">
       <header class="fixed top-0 left-0 w-full z-30 border-b border-white/10 bg-[#0d111a]/70 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 md:h-20 flex items-center gap-4">
           <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -20,10 +20,71 @@
           </a>
           <nav class="hidden md:flex flex-1 text-xs uppercase tracking-[0.16em] justify-center">
             <div class="flex items-center gap-6">
-              <a href="#catalog" class="hover:text-black whitespace-nowrap">Памятники</a>
-              <a href="#complexes" class="hover:text-black whitespace-normal leading-tight text-center">Мемориальные<br />комплексы</a>
+              <div class="relative"
+                   @mouseenter="menu='pamyatniki'"
+                   @mouseleave="menu=null">
+                <a href="#catalog" class="hover:text-black whitespace-nowrap">Памятники</a>
+                <div
+                  x-show="menu==='pamyatniki'"
+                  x-transition:enter="transition ease-out duration-150"
+                  x-transition:enter-start="opacity-0 -translate-y-2"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-in duration-120"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 -translate-y-2"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-60 bg-[#111016] border border-[rgba(255,255,255,0.12)] shadow-soft/70 p-3 space-y-2 text-[11px] tracking-[0.12em]"
+                >
+                  <a href="/gallery.html?type=simple" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Памятники простой формы</a>
+                  <a href="/gallery.html?type=combo" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Комбинированные памятники</a>
+                </div>
+              </div>
+
+              <div class="relative text-center leading-tight"
+                   @mouseenter="menu='complexes'"
+                   @mouseleave="menu=null">
+                <a href="#catalog" class="hover:text-black whitespace-normal leading-tight text-center">Мемориальные<br />комплексы</a>
+                <div
+                  x-show="menu==='complexes'"
+                  x-transition:enter="transition ease-out duration-150"
+                  x-transition:enter-start="opacity-0 -translate-y-2"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-in duration-120"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 -translate-y-2"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-64 bg-[#111016] border border-[rgba(255,255,255,0.12)] shadow-soft/70 p-3 space-y-2 text-[11px] tracking-[0.12em]"
+                >
+                  <a href="/gallery.html?type=complex" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Мемориальные комплексы</a>
+                  <a href="/gallery.html?type=svo" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">СВО мемориальные комплексы</a>
+                  <a href="/gallery.html?type=exclusive" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Эксклюзивные мемориальные комплексы</a>
+                  <a href="/gallery.html?type=premium" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Премиальные решения</a>
+                </div>
+              </div>
+
               <a href="#works" class="hover:text-black whitespace-normal leading-tight text-center">Выполненные<br />работы</a>
-              <a href="#products" class="hover:text-black whitespace-nowrap">Товары</a>
+
+              <div class="relative"
+                   @mouseenter="menu='products'"
+                   @mouseleave="menu=null">
+                <a href="#products" class="hover:text-black whitespace-nowrap">Товары</a>
+                <div
+                  x-show="menu==='products'"
+                  x-transition:enter="transition ease-out duration-150"
+                  x-transition:enter-start="opacity-0 -translate-y-2"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-in duration-120"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 -translate-y-2"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-[#111016] border border-[rgba(255,255,255,0.12)] shadow-soft/70 p-3 grid grid-cols-1 gap-2 text-[11px] tracking-[0.12em]"
+                >
+                  <a href="/gallery.html?type=fence" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Ограды</a>
+                  <a href="/gallery.html?type=vases" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Вазы и лампады</a>
+                  <a href="/gallery.html?type=angels" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Ангелы и скульптуры</a>
+                  <a href="/gallery.html?type=stone" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Столы и лавочки из камня</a>
+                  <a href="/gallery.html?type=metal" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Столы и лавочки металлические</a>
+                  <a href="/gallery.html?type=photo" class="block px-3 py-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] hover:text-white">Фото на стекле и керамика</a>
+                </div>
+              </div>
+
               <a href="#about" class="hover:text-black whitespace-nowrap">О нас</a>
               <a href="#blog" class="hover:text-black whitespace-nowrap">Материалы</a>
               <a href="#contacts" class="hover:text-black whitespace-nowrap">Контакты</a>
@@ -49,7 +110,7 @@
           class="md:hidden bg-[#0f1420] border-t border-white/10 px-4 py-4 space-y-3 text-sm uppercase tracking-[0.14em]"
         >
           <a href="#catalog" class="block" @click="navOpen = false">Памятники</a>
-          <a href="#complexes" class="block" @click="navOpen = false">Мемориальные комплексы</a>
+          <a href="#catalog" class="block" @click="navOpen = false">Мемориальные комплексы</a>
           <a href="#works" class="block" @click="navOpen = false">Выполненные работы</a>
           <a href="#products" class="block" @click="navOpen = false">Товары</a>
           <a href="#about" class="block" @click="navOpen = false">О нас</a>
@@ -107,162 +168,84 @@
               </p>
             </div>
             <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0s">
+              <a href="/gallery.html?type=simple" class="group surface shadow-soft overflow-hidden soft-card reveal block" style="--d:0s">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden bg-white">
+                  <img
+                    src="/assets/main/Простые.jpg"
+                    alt="Простые памятники"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Простые памятники</h3>
+                  <p class="text-sm leading-relaxed">Базовые формы и аккуратная геометрия без сложных комбинированных элементов.</p>
+                </div>
+              </a>
+              <a href="/gallery.html?type=combo" class="group surface shadow-soft overflow-hidden soft-card reveal block" style="--d:0.05s">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden bg-white">
+                  <img
+                    src="/assets/main/Комбинированные.jpg"
+                    alt="Комбинированные памятники"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
+                <div class="p-5 space-y-2">
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Комбинированные памятники</h3>
+                  <p class="text-sm leading-relaxed">Сочетание фактур, материалов и декоративных деталей для индивидуального образа.</p>
+                </div>
+              </a>
+              <a href="/gallery.html?type=complex" class="group surface shadow-soft overflow-hidden soft-card reveal block" style="--d:0.1s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
-                    src="/assets/complexes/№79.jpg"
-                    alt="Каталог 1"
+                    src="/assets/main/Мемориальные%20Комплексы.jpg"
+                    alt="Мемориальные комплексы"
                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-1</h3>
-                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита с элементами гранитной брусчатки.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Мемориальные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Гармоничные ансамбли с архитектурной проработкой и функциональными зонами.</p>
                 </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.05s">
+              </a>
+              <a href="/gallery.html?type=svo" class="group surface shadow-soft overflow-hidden soft-card reveal block" style="--d:0.15s">
                 <div class="relative w-full h-52 sm:h-64 overflow-hidden">
                   <img
-                    src="/assets/complexes/№80.jpg"
-                    alt="Каталог 2"
+                    src="/assets/main/СВО.jpg"
+                    alt="СВО мемориальные комплексы"
                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-2</h3>
-                  <p class="text-sm leading-relaxed">Архитектурная композиция из мрамора Коелга, колонны и гранитное основание.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">СВО мемориальные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Специализированные решения с учётом регламентов и символики для героев СВО.</p>
                 </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.1s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
+              </a>
+              <a href="/gallery.html?type=exclusive" class="group surface shadow-soft overflow-hidden soft-card reveal block" style="--d:0.2s">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden bg-white">
                   <img
-                    src="/assets/complexes/№81.jpg"
-                    alt="Каталог 3"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    src="/assets/main/Эксклюзивные.jpg"
+                    alt="Эксклюзивные мемориальные комплексы"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-3</h3>
-                  <p class="text-sm leading-relaxed">Мемориальный комплекс из Габбро-Диабаз с Голгофой и крестом из мрамора Коелга.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Эксклюзивные мемориальные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Уникальные проекты с редкими материалами, авторской архитектурой и деталями.</p>
                 </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.15s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
+              </a>
+              <a href="/gallery.html?type=premium" class="group surface shadow-soft overflow-hidden soft-card reveal block" style="--d:0.25s">
+                <div class="relative w-full h-52 sm:h-64 overflow-hidden bg-white">
                   <img
-                    src="/assets/complexes/№82.jpg"
-                    alt="Каталог 4"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    src="/assets/main/Премиальные.JPG"
+                    alt="Премиальные мемориальные комплексы"
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
                   />
                 </div>
                 <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-4</h3>
-                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз в сочетании с гранитой Куру-Грей.</p>
+                  <h3 class="text-lg uppercase tracking-[0.12em]">Премиальные мемориальные комплексы</h3>
+                  <p class="text-sm leading-relaxed">Высокий класс исполнения, сложные формы и насыщенный дизайн для знаковых проектов.</p>
                 </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.2s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№83.jpg"
-                    alt="Каталог 5"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-5</h3>
-                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Абсолют-Блэк и мрамор Тассос</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.25s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№84.jpg"
-                    alt="Каталог 6"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-6</h3>
-                  <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз и мрамор Коелга.</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.3s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№49.jpg"
-                    alt="Каталог 7"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-7</h3>
-                  <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз в сочетании с Дымовским гранитом и гранитной брусчаткой.</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.35s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№50.jpg"
-                    alt="Каталог 8"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-8</h3>
-                  <p class="text-sm leading-relaxed">Гранит Габбро-Диабаз из мрамора Коелга и гранитной брусчаткой.</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.4s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№51.jpg"
-                    alt="Каталог 9"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-9</h3>
-                  <p class="text-sm leading-relaxed">Мраморный комплекс из Дымовского гранита, фото на стекле.</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.45s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№52.jpg"
-                    alt="Каталог 10"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-10</h3>
-                  <p class="text-sm leading-relaxed">Семейный мемориальный комплекс из гранита Габбро-Диабаз.</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.5s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/112.png"
-                    alt="Каталог 11"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-11</h3>
-                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз и Мрамора.</p>
-                </div>
-              </div>
-              <div class="group surface shadow-soft overflow-hidden soft-card reveal" style="--d:0.55s">
-                <div class="relative w-full h-52 sm:h-64 overflow-hidden">
-                  <img
-                    src="/assets/complexes/№54.jpg"
-                    alt="Каталог 12"
-                    class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-lg uppercase tracking-[0.12em]">Комплекс МК-12</h3>
-                  <p class="text-sm leading-relaxed">Мемориальный комплекс из гранита Габбро-Диабаз с Мансуровским гранитом и портрет на стекле.</p>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="mt-8">
               <a
@@ -839,6 +822,13 @@
                   const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
                   const next = Math.max(0, Math.min(el.scrollWidth - el.clientWidth, el.scrollLeft + delta));
                   el.scrollTo({ left: next, behavior: 'smooth' });
+                },
+                scrollBy(dir){
+                  const el = $refs.materials;
+                  if(!el) return;
+                  const step = el.clientWidth * 0.8;
+                  const next = Math.max(0, Math.min(el.scrollWidth - el.clientWidth, el.scrollLeft + dir * step));
+                  el.scrollTo({ left: next, behavior: 'smooth' });
                 }
               }"
             >
@@ -862,7 +852,7 @@
                   </div>
                   <div class="px-3 py-3 text-center">
                     <div class="uppercase tracking-[0.12em] text-sm">Габбро-диабаз</div>
-                    <div class="text-xs text-dark-lava/70 mt-1">Китай</div>
+                    <div class="text-xs text-dark-lava/70 mt-1">Россия</div>
                   </div>
                 </div>
                 <div class="w-52 flex-shrink-0 surface shadow-soft soft-card reveal snap-start" style="--d:0.1s">
@@ -920,7 +910,25 @@
                   </div>
                 </div>
               </div>
-              <div class="text-xs text-dark-lava/60 mt-2">Прокрутите колесиком, чтобы увидеть больше материалов</div>
+              <div class="flex items-center justify-start gap-3 mt-3 text-american-silver/80">
+                <button
+                  type="button"
+                  @click="scrollBy(-1)"
+                  class="inline-flex items-center justify-center w-12 h-12 rounded-sm border border-[rgba(243,201,120,0.4)] text-xl font-semibold text-american-silver hover:bg-[rgba(243,201,120,0.12)] hover:text-[#f3c978] transition"
+                  aria-label="Прокрутить влево"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  @click="scrollBy(1)"
+                  class="inline-flex items-center justify-center w-12 h-12 rounded-sm border border-[rgba(243,201,120,0.4)] text-xl font-semibold text-american-silver hover:bg-[rgba(243,201,120,0.12)] hover:text-[#f3c978] transition"
+                  aria-label="Прокрутить вправо"
+                >
+                  ›
+                </button>
+              </div>
+              <div class="text-xs text-dark-lava/60 mt-2">Прокрутите колесиком или нажмите на указатель, чтобы увидеть больше материалов</div>
             </div>
           </div>
         </section>
