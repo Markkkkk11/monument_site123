@@ -43,7 +43,7 @@
     section {
       scroll-margin-top: 104px;
     }
-  }
+}
 
   h1,
   h2,
@@ -132,7 +132,7 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
-  }
+}
 
   @media (prefers-reduced-motion: reduce) {
     .soft-card,
